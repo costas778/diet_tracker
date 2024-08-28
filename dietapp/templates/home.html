@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Diet Tracker</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the Diet Tracker!</h1>
+        </header>
+
+        <section class="intro">
+            <p>
+                The Diet Tracker is a portal designed to help you record your daily food intake and monitor your nutritional habits. This information can be accessed by professionals, who can provide personalized advice to help you achieve your health goals.
+            </p>
+        </section>
+
+        <section class="action-buttons">
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Diet Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>

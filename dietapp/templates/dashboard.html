@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Dashboard</h2>
+<p>Welcome, {{ user.username }}!</p>
+<h3>Your Diet Entries</h3>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Meal</th>
+        <th>Calories</th>
+    </tr>
+    {% for entry in diet_entries %}
+    <tr>
+        <td>{{ entry.date }}</td>
+        <td>{{ entry.meal }}</td>
+        <td>{{ entry.calories }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p><a href="{% url 'diet_questionnaire' %}">Add a new entry</a></p>
+<p><a href="{% url 'logout' %}">Logout</a></p>
+{% endblock %}
